@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -12,7 +12,7 @@ import Skins from "./components/Skins";
 function App() {
   return (
     <main className="">
-      <Header className="sticky" />
+      <Header id="nav" className="sticky" />
       <Routes>
         <Route path="/OurStory" element={<OurStory />} />
         <Route path="/AnarcWatch" element={<AnarcWatch />} />
