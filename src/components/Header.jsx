@@ -26,6 +26,7 @@ const Header = () => {
       opacity: 0,
       duration: 1,
       delay: 1,
+      ease: "bounce.out",
     });
     tl.to(headRef.current, {
       width: 200,
@@ -44,7 +45,7 @@ const Header = () => {
     });
 
     tl.from(rightRef.current, {
-      x: 1000,
+      x: 10,
       opacity: 0,
       duration: 0.5,
     });
@@ -55,82 +56,133 @@ const Header = () => {
     });
   });
   return (
-    <div
-      ref={headRef}
-      className="p-1 m-1 w-screen flex sticky place-self-center rounded-2xl shadow-lg shadow-gray-500 backdrop-blur-md dark:text-white dark:bg-slate-900/80"
-    >
-      {/*    logo    */}
-      <img src={Layers} alt="LAYERS" className="h-12" />
-      {/*    mid     */}
-      <span
-        ref={midRef}
-        className="hidden w-fit m-auto ml-16 font-mono sm:hidden md:hidden lg:flex"
+    <div className="mx-1">
+      <div
+        ref={headRef}
+        className="p-1 m-1 w-full flex sticky place-self-center rounded-2xl shadow-lg shadow-gray-500 backdrop-blur-md dark:text-white dark:bg-slate-900/80"
       >
-        <p className="px-3">Our Story</p>
-        <p className="px-3">ANARC Watch </p>
-        <p className="px-3">Arcs Strap</p>
-        <p className="px-3">Skin</p>
-      </span>
-      {/*    right    */}
-      <span
-        ref={rightRef}
-        className="hidden p-3 absolute font-mono font-semibold sm:flex sm:right-10 md:flex md:right10 lg:flex lg:right-0"
-      >
-        <FontAwesomeIcon icon={faUser} className="mx-3 my-1"></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faBagShopping}
-          className="mx-3 my-1"
-        ></FontAwesomeIcon>
-        <button className="px-2 ml-2 bg-blue-500 rounded-lg">Buy Now</button>
-      </span>
-      {/*  Menu bar   */}
-      <span ref={menuRef} className="absolute right-0 z-10 p-3 lg:hidden">
-        <FontAwesomeIcon
-          onClick={() => {
-            setmenu(!menu);
-          }}
-          icon={menu ? faEllipsisVertical : faBars}
-          className="text-2xl"
-        />
-      </span>
-      {/*   Side Menu    */}
-      <span
-        className={
-          menu
-            ? "scale-1 duration-100 origin-[95%_10%] absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-lg bg-gray-500/50 z-0 lg:hidden"
-            : "scale-0 duration-100 origin-[95%_10%] absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-lg bg-gray-500/50 z-0 lg:hidden"
-        }
-      >
-        <div className="block border-gray-600 border-b-2 w-fit p-2 md:hidden sm:hidden">
-          <div className="my-2">
-            <button className="px-2 ml-2 bg-blue-500 rounded-lg">
-              Buy Now
-            </button>
-          </div>
+        {/*    logo    */}
+        <img src={Layers} alt="LAYERS" className="h-12" />
+        {/*    mid     */}
+        <span
+          ref={midRef}
+          className="hidden w-fit m-auto ml-16 font-mono sm:hidden md:hidden lg:flex"
+        >
+          <a
+            href="https://www.layers.shop/pages/our-story"
+            target="_blank"
+            className="px-3 block"
+          >
+            Our Story
+          </a>
+          <a
+            href="https://www.layers.shop/products/anarc"
+            target="_blank"
+            className="px-3 block"
+          >
+            ANARC Watch{" "}
+          </a>
+          <a
+            href="https://www.layers.shop/collections/arcs"
+            target="_blank"
+            className="px-3 block"
+          >
+            Arcs Strap
+          </a>
+          <a
+            href="https://www.layers.shop/products/build-your-skin"
+            target="_blank"
+            className="px-3 block"
+          >
+            Skin
+          </a>
+        </span>
+        {/*    right    */}
+        <span
+          ref={rightRef}
+          className="hidden p-3 absolute font-mono font-semibold sm:flex sm:right-10 md:flex md:right10 lg:flex lg:right-0"
+        >
           <FontAwesomeIcon
             icon={faUser}
-            className="mx-3 my-1"
+            className="mx-3 my-1 hover:scale-105 active:scale-95"
           ></FontAwesomeIcon>
           <FontAwesomeIcon
             icon={faBagShopping}
-            className="mx-3 my-1"
+            className="mx-3 my-1 hover:scale-105 active:scale-95"
           ></FontAwesomeIcon>
-        </div>
-        <div className="">
-          <Link to="/OurStory" className="p-3 block">
-            Our Story
-          </Link>
-          <Link to="/AnarcWatch" className="p-3 block">
-            ANARC Watch{" "}
-          </Link>
-          <Link to="/ArcsStrap" className="p-3 block">
-            Arcs Strap
-          </Link>
-          <Link to="/Skins" className="p-3 block">
-            Skin
-          </Link>
-        </div>
-      </span>
+          <a href="https://www.layers.shop/products/anarc" target="_blank">
+            <button className="px-2 ml-2 bg-blue-500 rounded-lg hover:scale-105 active:scale-95">
+              Buy Now
+            </button>
+          </a>
+        </span>
+        {/*  Menu bar   */}
+        <span ref={menuRef} className="absolute right-0 z-10 p-3 lg:hidden">
+          <FontAwesomeIcon
+            onClick={() => {
+              setmenu(!menu);
+            }}
+            icon={menu ? faEllipsisVertical : faBars}
+            className="text-2xl"
+          />
+        </span>
+        {/*   Side Menu    */}
+        <span
+          className={
+            menu
+              ? "scale-1 duration-100 origin-[95%_10%] absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-lg bg-gray-500/50 z-0 lg:hidden"
+              : "scale-0 duration-100 origin-[95%_10%] absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-lg bg-gray-500/50 z-0 lg:hidden"
+          }
+        >
+          <div className="block border-gray-600 border-b-2 w-fit p-2 md:hidden sm:hidden">
+            <div className="my-2">
+              <a href="https://www.layers.shop/products/anarc" target="_blank">
+                <button className="px-2 ml-2 bg-blue-500 rounded-lg">
+                  Buy Now
+                </button>
+              </a>
+            </div>
+            <FontAwesomeIcon
+              icon={faUser}
+              className="mx-3 my-1"
+            ></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faBagShopping}
+              className="mx-3 my-1"
+            ></FontAwesomeIcon>
+          </div>
+          <div className="">
+            <a
+              href="https://www.layers.shop/pages/our-story"
+              target="_blank"
+              className="px-3 block"
+            >
+              Our Story
+            </a>
+            <a
+              href="https://www.layers.shop/products/anarc"
+              target="_blank"
+              className="px-3 block"
+            >
+              ANARC Watch{" "}
+            </a>
+            <a
+              href="https://www.layers.shop/collections/arcs"
+              target="_blank"
+              className="px-3 block"
+            >
+              Arcs Strap
+            </a>
+            <a
+              href="https://www.layers.shop/products/build-your-skin"
+              target="_blank"
+              className="px-3 block"
+            >
+              Skin
+            </a>
+          </div>
+        </span>
+      </div>
     </div>
   );
 };
