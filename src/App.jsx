@@ -1,25 +1,20 @@
 import { useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import Header from "./components/Header";
-import { Route, Routes } from "react-router-dom";
-import OurStory from "./components/OurStory";
-import AnarcWatch from "./components/AnarcWatch";
-import ArcsStrap from "./components/ArcsStrap";
-import Skins from "./components/Skins";
-
+import ANARC from "./assets/ANARC.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import Page1 from "./components/Page1";
 function App() {
   return (
-    <main className="">
-      <Header id="nav" className="sticky" />
-      <Routes>
-        <Route path="/OurStory" element={<OurStory />} />
-        <Route path="/AnarcWatch" element={<AnarcWatch />} />
-        <Route path="/ArcsStrap" element={<ArcsStrap />} />
-        <Route path="/Skins" element={<Skins />} />
-      </Routes>
-      <p>Hello</p>
+    <main className="relative">
+      <div className="fixed top-0 z-30">
+        <Header id="nav" className="" />
+      </div>
+      <div className="relative">
+        <Page1 />
+      </div>
     </main>
   );
 }

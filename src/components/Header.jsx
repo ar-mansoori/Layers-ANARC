@@ -56,10 +56,10 @@ const Header = () => {
     });
   });
   return (
-    <div className="mx-1">
+    <div className="fixed w-screen px-1">
       <div
         ref={headRef}
-        className="p-1 m-1 w-full flex sticky place-self-center rounded-2xl shadow-lg shadow-gray-500 backdrop-blur-md dark:text-white dark:bg-slate-900/80"
+        className="p-1 m-1 w-full flex place-self-center rounded-2xl shadow-lg shadow-gray-500 backdrop-blur-md dark:text-white dark:bg-slate-900/80"
       >
         {/*    logo    */}
         <img src={Layers} alt="LAYERS" className="h-12" />
@@ -117,7 +117,7 @@ const Header = () => {
           </a>
         </span>
         {/*  Menu bar   */}
-        <span ref={menuRef} className="absolute right-0 z-10 p-3 lg:hidden">
+        <span ref={menuRef} className="absolute right-0 z-50 p-3 lg:hidden">
           <FontAwesomeIcon
             onClick={() => {
               setmenu(!menu);
@@ -130,8 +130,8 @@ const Header = () => {
         <span
           className={
             menu
-              ? "scale-1 duration-100 origin-[95%_10%] absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-lg bg-gray-500/50 z-0 lg:hidden"
-              : "scale-0 duration-100 origin-[95%_10%] absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-lg bg-gray-500/50 z-0 lg:hidden"
+              ? "scale-1 duration-100 origin-[95%_10%] p-1 absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-sm bg-gray-500/50 z-40 lg:hidden"
+              : "scale-0 duration-100 origin-[95%_10%] p-1 absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-sm bg-gray-500/50 z-40 lg:hidden"
           }
         >
           <div className="block border-gray-600 border-b-2 w-fit p-2 md:hidden sm:hidden">
