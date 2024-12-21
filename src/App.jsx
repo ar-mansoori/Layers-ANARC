@@ -8,13 +8,14 @@ import gsap from "gsap";
 import Page1 from "./components/Page1";
 function App() {
   return (
-    <main className="relative">
+    <main className="relative overflow-auto">
       <div className="fixed top-0 z-30">
         <Header id="nav" className="" />
       </div>
       <div className="relative">
         <Page1 />
       </div>
+      <div className="h-screen w-screen">Hello</div>
     </main>
   );
 }

@@ -56,7 +56,7 @@ const Header = () => {
     });
   });
   return (
-    <div className="fixed w-screen px-1">
+    <div className="fixed w-full px-1">
       <div
         ref={headRef}
         className="p-1 m-1 w-full flex place-self-center rounded-2xl shadow-lg shadow-gray-500 backdrop-blur-md dark:text-white dark:bg-slate-900/80"
