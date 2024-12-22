@@ -29,12 +29,12 @@ const Header = () => {
       ease: "bounce.out",
     });
     tl.to(headRef.current, {
-      width: 200,
+      width: 150,
       duration: 1,
       delay: -1,
     });
     tl.from(headRef.current, {
-      width: 200,
+      width: 150,
       duration: 1,
       delay: 0,
     });

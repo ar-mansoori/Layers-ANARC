@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import ANARC from "../assets/ANARC.png";
 import ANARClogo from "../assets/ANARClogo.png";
 import ANARClogobox from "../assets/ANARClogobox.png";
+import Page1back from "../assets/Page1back.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { use } from "react";
@@ -107,7 +108,13 @@ const Page1 = () => {
     });
   });
   return (
-    <div className="h-screen w-full">
+    <div
+      className="h-screen w-full bg-cover"
+      style={{
+        backgroundImage: `url('${Page1back}')`,
+        backgroundPosition: top,
+      }}
+    >
       {/*ANARC LOGO*/}
       <div>
         <img

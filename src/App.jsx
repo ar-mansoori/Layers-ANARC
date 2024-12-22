@@ -13,9 +13,9 @@ function App() {
         <Header id="nav" className="" />
       </div>
       <div className="relative">
-        <Page1 />
+        <Page1 className="" />
       </div>
-      <div className="h-screen w-screen">Hello</div>
+      <div className="h-screen w-full">Hello</div>
     </main>
   );
 }
