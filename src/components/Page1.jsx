@@ -5,7 +5,8 @@ import ANARClogobox from "../assets/ANARClogobox.png";
 import Page1back from "../assets/Page1back.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { use } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page1 = () => {
   let tl = gsap.timeline();
@@ -107,12 +108,42 @@ const Page1 = () => {
       });
     });
   });
+  useGSAP(() => {
+    mm.add("(max-width:1023px)", () => {
+      gsap.to("#Page1", {
+        backgroundPositionX: 100,
+        scrollTrigger: {
+          trigger: "#Page1",
+          scroller: "body",
+          start: "bottom 90%",
+          end: "bottom 10%",
+          markers: true,
+          scrub: 3,
+        },
+      });
+    });
+    mm.add("(min-width:1024px)", () => {
+      gsap.to("#Page1", {
+        backgroundPositionY: 100,
+        scrollTrigger: {
+          trigger: "#Page1",
+          scroller: "body",
+          start: "bottom 90%",
+          end: "bottom 10%",
+          markers: true,
+          scrub: 3,
+        },
+      });
+    });
+  });
   return (
     <div
+      id="Page1"
       className="h-screen w-full bg-cover"
       style={{
         backgroundImage: `url('${Page1back}')`,
         backgroundPosition: top,
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/*ANARC LOGO*/}
