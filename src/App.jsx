@@ -9,7 +9,7 @@ import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 function App() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <div className="fixed top-0 z-30">
         <Header id="nav" className="" />
       </div>
@@ -19,6 +19,7 @@ function App() {
       <div className="relative">
         <Page2 />
       </div>
+      <div className="h-screen w-full">HEllo</div>
     </main>
   );
 }

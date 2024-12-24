@@ -108,10 +108,11 @@ const Page1 = () => {
       });
     });
   });
+  /* Background scroll */
   useGSAP(() => {
     mm.add("(max-width:1023px)", () => {
       gsap.to("#Page1", {
-        backgroundPositionX: 100,
+        backgroundPositionX: 20,
         scrollTrigger: {
           trigger: "#Page1",
           scroller: "body",
