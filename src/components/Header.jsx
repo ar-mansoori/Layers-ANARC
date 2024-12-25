@@ -25,7 +25,7 @@ const Header = () => {
       y: -100,
       opacity: 0,
       duration: 1,
-      delay: 1,
+      delay: 7,
       ease: "bounce.out",
     });
     tl.to(headRef.current, {
@@ -59,7 +59,7 @@ const Header = () => {
     <div className="fixed w-full px-1">
       <div
         ref={headRef}
-        className="p-1 m-1 w-full flex place-self-center rounded-2xl shadow-lg shadow-gray-500 backdrop-blur-md dark:text-white dark:bg-slate-900/80"
+        className="p-1 m-1 w-full flex place-self-center rounded-2xl shadow-lg shadow-slate-900/50 backdrop-blur-md bg-slate-900/80 text-white"
       >
         {/*    logo    */}
         <img src={Layers} alt="LAYERS" className="h-12" />

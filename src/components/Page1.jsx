@@ -11,6 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 const Page1 = () => {
   let tl = gsap.timeline();
   let mm = gsap.matchMedia();
+  useGSAP(() => {
+    gsap.to("#Page1", {
+      opacity: 1,
+      duration: 4,
+      delay: 3,
+    });
+  });
 
   /*Watch Animation */
   const watchRef = useRef();
@@ -18,7 +25,7 @@ const Page1 = () => {
     tl.from(watchRef.current, {
       x: 1000,
       duration: 1,
-      delay: 2,
+      delay: 9,
     });
     gsap.to(watchRef.current, {
       y: 20,
@@ -118,7 +125,6 @@ const Page1 = () => {
           scroller: "body",
           start: "bottom 90%",
           end: "bottom 10%",
-          markers: true,
           scrub: 3,
         },
       });
@@ -131,7 +137,6 @@ const Page1 = () => {
           scroller: "body",
           start: "bottom 90%",
           end: "bottom 10%",
-          markers: true,
           scrub: 3,
         },
       });
@@ -140,7 +145,7 @@ const Page1 = () => {
   return (
     <div
       id="Page1"
-      className="h-screen w-full bg-cover"
+      className="h-screen w-full bg-cover opacity-0"
       style={{
         backgroundImage: `url('${Page1back}')`,
         backgroundPosition: top,
