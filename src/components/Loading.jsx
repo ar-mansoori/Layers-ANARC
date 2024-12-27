@@ -5,11 +5,15 @@ import gsap from "gsap";
 
 const Loading = () => {
   let vidRef = useRef();
+  let tl = gsap.timeline();
   useGSAP(() => {
-    gsap.to(vidRef.current, {
+    tl.to(vidRef.current, {
       opacity: 0,
       duration: 0.5,
       delay: 6,
+    });
+    tl.to(vidRef.current, {
+      visibility: "none",
     });
   });
   return (
