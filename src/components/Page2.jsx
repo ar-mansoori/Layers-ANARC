@@ -84,6 +84,23 @@ const Page2 = () => {
       },
     });
   });
+  /*Subtitle */
+  let subtitleRef = useRef();
+  useGSAP(() => {
+    gsap.from(subtitleRef.current, {
+      y: "150%",
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: pageref.current,
+        scroller: "body",
+        start: "top 20%",
+        end: "top 0%",
+        scrub: 1,
+        toggleActions: "play reverse restart reverse",
+      },
+    });
+  });
   return (
     <div
       ref={pageref}
@@ -124,7 +141,10 @@ const Page2 = () => {
         </div>
       </div>
       {/*subtitle */}
-      <div className="relative xl:absolute sm:top-10 lg:top-6 xl:top-2/3 w-8/12 sm:w-full md:w-fit xl:w-2/5 place-self-center sm:place-self-start md:place-self-center xl:place-self-start xl:mx-14 h-fit">
+      <div
+        ref={subtitleRef}
+        className="relative -top-10 xl:absolute sm:top-10 lg:top-6 xl:top-2/3 w-8/12 sm:w-full md:w-fit xl:w-2/5 place-self-center sm:place-self-start md:place-self-center xl:place-self-start xl:mx-14 h-fit"
+      >
         <p className="text-slate-500 text-center text-lg sm:text-3xl">
           When Beauty and Geometry come together.
         </p>
