@@ -43,7 +43,6 @@ const Header = () => {
       opacity: 0,
       duration: 1,
     });
-
     tl.from(rightRef.current, {
       x: 10,
       opacity: 0,

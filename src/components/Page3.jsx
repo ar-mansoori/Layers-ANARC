@@ -83,7 +83,7 @@ const Page3 = () => {
         trigger: boxRef.current,
         scroller: "body",
         start: "top 50%",
-        end: "top -50%",
+        end: "top 10%",
         scrub: 1,
         toggleActions: "play reverse restart reverse",
       },
@@ -119,7 +119,7 @@ const Page3 = () => {
         {/*Subtitle  */}
         <div
           ref={subtitleRef}
-          className="relative sm:absolute sm:bottom-20 xl:top-2/3 xl:left-14 w-8/12 sm:w-full md:w-fit lg:w-full xl:w-2/5 place-self-center sm:place-self-start md:place-self-center xl:place-self-start xl:mx-14 h-fit"
+          className="relative sm:absolute sm:bottom-14 xl:top-2/3 xl:left-14 w-8/12 sm:w-full md:w-fit lg:w-full xl:w-2/5 place-self-center sm:place-self-start md:place-self-center xl:place-self-start xl:mx-14 h-fit"
         >
           <p className="text-slate-500 text-center text-lg sm:text-3xl">
             Unmatched design and a functional crown with haptics that keeps up
