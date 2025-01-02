@@ -410,7 +410,7 @@ const Page4 = () => {
         {/*Title */}
         <div
           ref={titleRef}
-          className="text-center text-5xl sm:text-6xl lg:text-6xl font-thin lg:absolute lg:left-0 lg:top-1/3 lg:w-1/2 lg:h-fit xl:px-5"
+          className="text-center text-5xl sm:text-6xl lg:text-6xl sm:font-thin lg:absolute lg:left-0 lg:top-1/3 lg:w-1/2 lg:h-fit xl:px-5"
         >
           Flagship chipset that’s high on performance.
         </div>

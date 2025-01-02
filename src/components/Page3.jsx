@@ -110,7 +110,7 @@ const Page3 = () => {
         <div className="relative sm:absolute sm:top-1/4 md:top-1/3 xl:top-1/3 xl:left-12 md:-translate-y-1/2 sm:w-1/2 sm:place-self-start p-5 text-center">
           <div
             ref={titleRef}
-            className="text-5xl sm:text-6xl lg:text-8xl font-thin"
+            className="text-5xl sm:text-6xl lg:text-8xl sm:font-thin"
           >
             Forged in stainless steel.
           </div>

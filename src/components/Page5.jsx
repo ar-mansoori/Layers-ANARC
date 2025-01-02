@@ -12,18 +12,44 @@ const Page5 = () => {
   let imgRef = useRef();
   let img1Ref = useRef();
   let mm = gsap.matchMedia();
-  /**Entry title and subtitle */
+  /**Entry image, title and subtitle */
   useGSAP(() => {
-    gsap.to(titleRef.current, {
-      duration: 1,
-      scale: 1.01,
-      textShadow: "0px 0px 5px rgba(156, 163, 175, 1)",
+    mm.add("(max-width:639px)", () => {
+      gsap.from(imgRef.current, {
+        opacity: 0,
+        y: "50%",
+        scale: 2,
+        scrollTrigger: {
+          trigger: pageRef.current,
+          scroller: "body",
+          start: "top 30%",
+          end: "top 0%",
+          scrub: 1,
+        },
+      });
+    });
+    mm.add("(min-width:640px)", () => {
+      gsap.from(imgRef.current, {
+        opacity: 0,
+        x: "50%",
+        scale: 1.3,
+        scrollTrigger: {
+          trigger: pageRef.current,
+          scroller: "body",
+          start: "top 30%",
+          end: "top 0%",
+          scrub: 1,
+        },
+      });
+    });
+    gsap.from(titleRef.current, {
+      opacity: 0,
       scrollTrigger: {
         trigger: pageRef.current,
         scroller: "body",
         start: "top 30%",
-        end: "top -50%",
-        toggleActions: "play none none none",
+        end: "top 0%",
+        scrub: 1,
       },
     });
     gsap.from(subTitleRef.current, {
@@ -99,7 +125,7 @@ const Page5 = () => {
         {/*Title */}
         <div
           ref={titleRef}
-          className="text-gray-400 relative sm:absolute sm:left-0 top-10 sm:top-1/2 sm:-translate-y-1/2 z-10 text-center text-5xl sm:text-6xl lg:text-6xl font-thin sm:w-2/3 sm:h-fit sm:mx-5"
+          className="text-gray-400 relative sm:absolute sm:left-0 top-10 sm:top-1/2 sm:-translate-y-1/2 z-10 text-center text-5xl sm:text-6xl lg:text-6xl sm:font-thin sm:w-2/3 sm:h-fit sm:mx-5"
         >
           Illuminate every detail.
         </div>

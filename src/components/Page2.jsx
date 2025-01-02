@@ -124,7 +124,9 @@ const Page2 = () => {
         ref={desRef}
         className="relative sm:absolute sm:top-1/3 md:top-1/2 xl:top-1/4 md:-translate-y-1/2 sm:w-1/2 sm:place-self-start my-10 text-center"
       >
-        <p className="text-7xl sm:text-6xl lg:text-8xl font-thin">DESIGNED</p>
+        <p className="text-7xl sm:text-6xl lg:text-8xl sm:font-thin">
+          DESIGNED
+        </p>
         <div className="font-mono">
           <p ref={lonRef} className="my-5 text-5xl sm:text-4xl lg:text-6xl">
             in London
