@@ -39,9 +39,7 @@ function App() {
       <div className="relative">
         <Page6 />
       </div>
-      <div className="relative">
-        <Page6 />
-      </div>
+      <div className="relative h-screen w-full">Hello</div>
     </main>
   );
 }

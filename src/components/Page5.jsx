@@ -75,7 +75,6 @@ const Page5 = () => {
         end: "top -40%",
         scrub: 1,
         pin: true,
-        markers: true,
       },
     });
     gsap.from(pageRef.current, {
