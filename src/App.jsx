@@ -12,6 +12,7 @@ import Page3 from "./components/Page3";
 import Page4 from "./components/Page4";
 import Page5 from "./components/Page5";
 import Page6 from "./components/Page6";
+import Page7 from "./components/Page7";
 function App() {
   return (
     <main className="relative overflow-hidden">
@@ -38,6 +39,9 @@ function App() {
       </div>
       <div className="relative">
         <Page6 />
+      </div>
+      <div className="relative">
+        <Page7 />
       </div>
       <div className="relative h-screen w-full">Hello</div>
     </main>
