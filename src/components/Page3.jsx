@@ -10,7 +10,6 @@ const Page3 = () => {
   let boxRef = useRef();
   let vidRef = useRef();
   let titleRef = useRef();
-  let tl2 = gsap.timeline();
   /* Video */
   useGSAP(() => {
     const videle = vidRef.current;

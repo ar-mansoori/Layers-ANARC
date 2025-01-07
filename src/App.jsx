@@ -14,6 +14,7 @@ import Page5 from "./components/Page5";
 import Page6 from "./components/Page6";
 import Page7 from "./components/Page7";
 import Feedback from "./components/Feedback";
+import Page8 from "./components/Page8";
 function App() {
   return (
     <main className="relative overflow-hidden">
@@ -43,6 +44,9 @@ function App() {
       </div>
       <div className="relative">
         <Page7 />
+      </div>
+      <div className="relative">
+        <Page8 />
       </div>
       <div className="relative">
         <Feedback />
