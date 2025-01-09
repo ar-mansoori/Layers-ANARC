@@ -172,7 +172,7 @@ const Page1 = () => {
       </div>
 
       {/* Titles */}
-      <div className="flex z-0 bg-none sm:block absolute bottom-52 left-1/2 -translate-x-1/2 sm:top-36 sm:left-0 sm:translate-x-0 sm:w-1/2 h-fit w-fit ">
+      <div className="flex z-0 bg-none sm:block absolute bottom-52 left-1/2 -translate-x-1/2 sm:top-36 sm:left-0 sm:translate-x-0 sm:w-1/2 h-fit w-fit backdrop-blur-sm sm:backdrop-blur-none rounded-lg">
         <div
           ref={t1Ref}
           className="p-2 sm:my-2 sm:p-4 sm:place-content-center sm:bg-slate-500/35 sm:w-full sm:rounded-r-2xl sm:flex sm:backdrop-blur-md font-mono text-2xl"
