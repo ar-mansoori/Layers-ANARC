@@ -5,7 +5,7 @@ const Feedback = () => {
   const client = new Client();
   client
     .setEndpoint("https://cloud.appwrite.io/v1")
-    .setProject("678100da001287a61409");
+    .setProject("678255360016bd4d2b70");
 
   const databases = new Databases(client);
 
@@ -22,8 +22,8 @@ const Feedback = () => {
 
     try {
       const response = await databases.createDocument(
-        "678104ae00372abd0ccd",
-        "678104b8003de439884a",
+        "6782556d0039171970e4",
+        "67825596001086fa7f8c",
         ID.unique(),
         payload
       );
