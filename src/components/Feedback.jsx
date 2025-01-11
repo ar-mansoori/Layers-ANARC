@@ -16,8 +16,8 @@ const Feedback = () => {
     e.preventDefault();
 
     const payload = {
-      name: name,
-      feedback: feedbackBody,
+      Name: name,
+      Feedback: feedbackBody,
     };
 
     try {
