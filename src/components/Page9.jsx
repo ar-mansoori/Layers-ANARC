@@ -89,35 +89,35 @@ const Page9 = () => {
               color === 1
                 ? "left-[0%] scale-100"
                 : color === 2
-                ? "left-[-100%]"
+                ? "left-[-100%] scale-50"
                 : color === 3
-                ? "left-[-200%]"
+                ? "left-[-200%] scale-50"
                 : "left-[0%]"
-            } object-cover w-full h-full duration-500 scale-50`}
+            } object-cover w-full h-full duration-500`}
           ></img>
           <img
             src={ANARCearthy}
             className={`relative ${
               color === 1
-                ? "left-[0%]"
+                ? "left-[0%] scale-50"
                 : color === 2
                 ? "left-[-100%] scale-100"
                 : color === 3
-                ? "left-[-200%]"
+                ? "left-[-200%] scale-50"
                 : "left-[0%]"
-            } object-cover w-full h-full duration-500 scale-50`}
+            } object-cover w-full h-full duration-500`}
           ></img>
           <img
             src={ANARCfrost}
             className={`relative ${
               color === 1
-                ? "left-[0%]"
+                ? "left-[0%] scale-50"
                 : color === 2
-                ? "left-[-100%]"
+                ? "left-[-100%] scale-50"
                 : color === 3
                 ? "left-[-200%] scale-100"
                 : "left-[0%]"
-            } object-cover w-full h-full duration-500 scale-50`}
+            } object-cover w-full h-full duration-500`}
           ></img>
         </div>
         {/**Color button */}

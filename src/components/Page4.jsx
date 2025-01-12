@@ -101,7 +101,7 @@ const Page4 = () => {
           trigger: vidContRef.current,
           scroller: "body",
           start: "15% 35%",
-          end: "15% 32%",
+          end: "15% 30%",
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -112,9 +112,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "15% 30%",
-          end: "15% 27%",
-
+          start: "15% 28%",
+          end: "15% 23%",
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -125,9 +124,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "15% 25%",
-          end: "15% 22%",
-
+          start: "15% 21%",
+          end: "15% 16%",
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -141,8 +139,7 @@ const Page4 = () => {
           trigger: vidContRef.current,
           scroller: "body",
           start: "35% 35%",
-          end: "35% 32%",
-
+          end: "35% 30%",
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -153,9 +150,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "35% 30%",
-          end: "35% 27%",
-
+          start: "35% 28%",
+          end: "35% 23%",
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -166,9 +162,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "35% 25%",
-          end: "35% 22%",
-
+          start: "35% 21%",
+          end: "35% 16%",
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -182,7 +177,19 @@ const Page4 = () => {
           trigger: vidContRef.current,
           scroller: "body",
           start: "32% 35%",
-          end: "32% 32%",
+          end: "32% 30%",
+          toggleActions: "play reverse restart reverse",
+        },
+      });
+      gsap.to(vidSubContRef.current, {
+        ease: "back.out",
+        duration: 0.5,
+        zIndex: 10,
+        scrollTrigger: {
+          trigger: vidContRef.current,
+          scroller: "body",
+          start: "32% 28%",
+          end: "32% 23%",
 
           toggleActions: "play reverse restart reverse",
         },
@@ -194,21 +201,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "32% 30%",
-          end: "32% 27%",
-
-          toggleActions: "play reverse restart reverse",
-        },
-      });
-      gsap.to(vidSubContRef.current, {
-        ease: "back.out",
-        duration: 0.5,
-        zIndex: 10,
-        scrollTrigger: {
-          trigger: vidContRef.current,
-          scroller: "body",
-          start: "32% 25%",
-          end: "32% 22%",
+          start: "32% 21%",
+          end: "32% 16%",
 
           toggleActions: "play reverse restart reverse",
         },
@@ -230,8 +224,7 @@ const Page4 = () => {
           trigger: vidContRef.current,
           scroller: "body",
           start: "15% 35%",
-          end: "15% 32%",
-
+          end: "15% 30%",
           onEnter: () => vid1ele.play(),
           onLeave: () => vid1ele.pause(),
           onEnterBack: () => vid1ele.play(),
@@ -249,9 +242,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "15% 30%",
-          end: "15% 27%",
-
+          start: "15% 28%",
+          end: "15% 23%",
           onEnter: () => vid2ele.play(),
           onLeave: () => vid2ele.pause(),
           onEnterBack: () => vid2ele.play(),
@@ -269,9 +261,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "15% 25%",
-          end: "15% 22%",
-
+          start: "15% 21%",
+          end: "15% 16%",
           onEnter: () => vid3ele.play(),
           onLeave: () => vid3ele.pause(),
           onEnterBack: () => vid3ele.play(),
@@ -291,8 +282,8 @@ const Page4 = () => {
           trigger: vidContRef.current,
           scroller: "body",
           start: "35% 35%",
-          end: "35% 32%",
-
+          end: "35% 30%",
+          markers: true,
           onEnter: () => vid1ele.play(),
           onLeave: () => vid1ele.pause(),
           onEnterBack: () => vid1ele.play(),
@@ -310,9 +301,9 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "35% 30%",
-          end: "35% 27%",
-
+          start: "35% 28%",
+          end: "35% 23%",
+          markers: true,
           onEnter: () => vid2ele.play(),
           onLeave: () => vid2ele.pause(),
           onEnterBack: () => vid2ele.play(),
@@ -330,9 +321,9 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "35% 25%",
-          end: "35% 22%",
-
+          start: "35% 21%",
+          end: "35% 16%",
+          markers: true,
           onEnter: () => vid3ele.play(),
           onLeave: () => vid3ele.pause(),
           onEnterBack: () => vid3ele.play(),
@@ -352,8 +343,7 @@ const Page4 = () => {
           trigger: vidContRef.current,
           scroller: "body",
           start: "32% 35%",
-          end: "32% 32%",
-
+          end: "32% 30%",
           onEnter: () => vid1ele.play(),
           onLeave: () => vid1ele.pause(),
           onEnterBack: () => vid1ele.play(),
@@ -371,9 +361,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "32% 30%",
-          end: "32% 27%",
-
+          start: "32% 28%",
+          end: "32% 23%",
           onEnter: () => vid2ele.play(),
           onLeave: () => vid2ele.pause(),
           onEnterBack: () => vid2ele.play(),
@@ -391,9 +380,8 @@ const Page4 = () => {
         scrollTrigger: {
           trigger: vidContRef.current,
           scroller: "body",
-          start: "32% 25%",
-          end: "32% 22%",
-
+          start: "32% 21%",
+          end: "32% 16%",
           onEnter: () => vid3ele.play(),
           onLeave: () => vid3ele.pause(),
           onEnterBack: () => vid3ele.play(),
@@ -421,7 +409,7 @@ const Page4 = () => {
         >
           <div
             ref={contRef}
-            className="relative flex overflow-hidden w-full h-full py-44 sm:py-24 lg:py-32 xl:py-40 rounded-2xl scale-95"
+            className="relative flex overflow-hidden w-full h-full py-[48%] sm:py-24 lg:py-32 xl:py-40 rounded-2xl scale-95"
           >
             <div
               ref={vidSubContRef}

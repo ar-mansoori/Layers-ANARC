@@ -16,12 +16,13 @@ import Page7 from "./components/Page7";
 import Feedback from "./components/Feedback";
 import Page8 from "./components/Page8";
 import Page9 from "./components/Page9";
+import About from "./components/About";
 function App() {
   return (
     <main className="relative overflow-hidden">
-      {/*<div className="fixed z-50 h-screen w-full">
+      <div className="fixed z-50 h-screen w-full">
         <Loading />
-      </div>*/}
+      </div>
       <div className="bg-black fixed top-0 z-50">
         <Header id="nav" className="" />
       </div>
@@ -53,9 +54,11 @@ function App() {
         <Page9 />
       </div>
       <div className="relative">
+        <About />
+      </div>
+      <div className="relative">
         <Feedback />
       </div>
-      <div className="relative h-screen w-full">Hello</div>
     </main>
   );
 }
