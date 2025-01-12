@@ -18,9 +18,16 @@ import Page8 from "./components/Page8";
 import Page9 from "./components/Page9";
 import About from "./components/About";
 function App() {
+  let LoadRef = useRef();
+  useGSAP(() => {
+    gsap.to(LoadRef.current, {
+      zIndex: 0,
+      delay: 7,
+    });
+  });
   return (
     <main className="relative overflow-hidden">
-      <div className="fixed z-50 h-screen w-full">
+      <div ref={LoadRef} className="fixed z-50 h-screen w-full">
         <Loading />
       </div>
       <div className="bg-black fixed top-0 z-50">
@@ -50,13 +57,13 @@ function App() {
       <div className="relative">
         <Page8 />
       </div>
-      <div className="relative">
+      <div className="relative z-40">
         <Page9 />
       </div>
-      <div className="relative">
+      <div className="relative z-40">
         <About />
       </div>
-      <div className="relative">
+      <div className="relative z-40">
         <Feedback />
       </div>
     </main>

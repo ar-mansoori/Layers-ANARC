@@ -17,7 +17,7 @@ const Loading = () => {
     });
   });
   return (
-    <div ref={vidRef} className="h-screen w-full ">
+    <div ref={vidRef} className="h-screen w-full">
       <video
         className="object-cover h-full w-full"
         src={LayersXAR}
