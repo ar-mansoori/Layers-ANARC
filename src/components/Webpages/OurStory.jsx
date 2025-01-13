@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import About from "../About";
 import { useGSAP } from "@gsap/react";
 import fitness from "./asset/fitness.webp";
 import aoc from "./asset/aoc.webp";
@@ -14,58 +13,10 @@ function OurStory() {
   const heroRef = useRef(null);
   const missionRef = useRef(null);
   const valuesRef = useRef(null);
+  const values1Ref = useRef(null);
+  const values2Ref = useRef(null);
   const storyRef = useRef(null);
 
-  /*useEffect(() => {
-    // Hero Animation
-    gsap.from(heroRef.current, {
-      opacity: 0,
-      y: 100,
-      duration: 1,
-      ease: "power3.out",
-    });
-
-    // Mission Animation
-    gsap.from(missionRef.current, {
-      scrollTrigger: {
-        trigger: missionRef.current,
-        start: "top center+=100",
-        toggleActions: "play none none reverse",
-      },
-      opacity: 0,
-      y: 60,
-      duration: 1,
-      ease: "power3.out",
-    });
-
-    // Values Animation
-    gsap.from(valuesRef.current?.children || [], {
-      scrollTrigger: {
-        trigger: valuesRef.current,
-        start: "top center+=100",
-        toggleActions: "play none none reverse",
-      },
-      opacity: 0,
-      y: 40,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: "power3.out",
-    });
-
-    // Story Section Animation
-    gsap.from(storyRef.current, {
-      scrollTrigger: {
-        trigger: storyRef.current,
-        start: "top center+=100",
-        toggleActions: "play none none reverse",
-      },
-      opacity: 0,
-      y: 60,
-      duration: 1,
-      ease: "power3.out",
-    });
-  }, []);*/
-  // Mission Animation
   useGSAP(() => {
     gsap.from(".letter", {
       opacity: 0,
@@ -79,15 +30,50 @@ function OurStory() {
         scrub: 1,
       },
     });
+    gsap.from(values1Ref.current, {
+      opacity: 0,
+      y: "-100%",
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: valuesRef.current,
+        scroller: "body",
+        start: "top 50%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
+    gsap.from(values2Ref.current, {
+      opacity: 0,
+      y: "-100%",
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: valuesRef.current,
+        scroller: "body",
+        start: "top 30%",
+        end: "top 20%",
+        scrub: 1,
+      },
+    });
+    gsap.from(storyRef.current, {
+      opacity: 0,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: storyRef.current,
+        scroller: "body",
+        start: "top 50%",
+        end: "top 30%",
+        scrub: 1,
+      },
+    });
   });
 
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-white pt-20">
         {/* Hero Section */}
         <div
           ref={heroRef}
-          className="relative text-center text-white px-4 w-full h-52 bg-blue-950 place-content-center"
+          className="relative text-center text-white px-4 w-full h-60 bg-blue-950 place-content-center"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Chaos is Creativity
@@ -225,11 +211,9 @@ function OurStory() {
           style={{
             backgroundImage: `url('${fitness}')`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "bottom",
           }}
-        >
-          {" "}
-        </div>
+        ></div>
         {/* Values Section */}
         <div className="bg-gray-50 py-20">
           <div
@@ -237,12 +221,18 @@ function OurStory() {
             className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12"
           >
             <img src={aoc}></img>
-            <div className="text-center lg:text-3xl text-gray-600">
+            <div
+              ref={values1Ref}
+              className="text-center lg:text-3xl text-gray-600"
+            >
               <p>Success must have a formula.</p>
               <p>Find it, and repeat it.</p>
               <p>Over and over and over again.</p>
             </div>
-            <div className="text-center lg:text-3xl text-gray-600">
+            <div
+              ref={values2Ref}
+              className="text-center lg:text-3xl text-gray-600"
+            >
               <p>But in this order-obsessed world,</p>
               <p>creativity cannot breathe,</p>
               <p>and innovation dies.</p>
@@ -285,9 +275,6 @@ function OurStory() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="relative h-fit w-full">
-        <About />
       </div>
     </>
   );

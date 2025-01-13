@@ -71,11 +71,6 @@ const Feedback = () => {
           </div>
         </form>
       </div>
-      <p className="text-center absolute bottom-0 text-xs w-full">
-        Credit of this Feedback section goes to Divyesh Gehlot. He managed the
-        communication of feedback to the database for me. <br /> Thanks
-        Brother...
-      </p>
     </div>
   );
 };

@@ -61,40 +61,26 @@ const Header = () => {
         className="p-1 m-1 w-full flex place-self-center rounded-2xl shadow-lg shadow-slate-900/50 backdrop-blur-md bg-slate-900/80 text-white"
       >
         {/*    logo    */}
-        <img src={Layers} alt="LAYERS" className="h-12" />
+        <a href="/" className="h-fit w-fit">
+          <img src={Layers} alt="LAYERS" className="h-12" />
+        </a>
         {/*    mid     */}
         <span
           ref={midRef}
           className="hidden w-fit m-auto ml-16 font-mono sm:hidden md:hidden lg:flex"
         >
-          <a
-            href="https://www.layers.shop/pages/our-story"
-            target="_blank"
-            className="px-3 block"
-          >
+          <Link to="/OurStory" className="px-3 block">
             Our Story
-          </a>
-          <a
-            href="https://www.layers.shop/products/anarc"
-            target="_blank"
-            className="px-3 block"
-          >
-            ANARC Watch{" "}
-          </a>
-          <a
-            href="https://www.layers.shop/collections/arcs"
-            target="_blank"
-            className="px-3 block"
-          >
+          </Link>
+          <Link to="/Watch" className="px-3 block">
+            ANARC Watch
+          </Link>
+          <Link to="/Strap" className="px-3 block">
             Arcs Strap
-          </a>
-          <a
-            href="https://www.layers.shop/products/build-your-skin"
-            target="_blank"
-            className="px-3 block"
-          >
+          </Link>
+          <Link to="/Skin" className="px-3 block">
             Skin
-          </a>
+          </Link>
         </span>
         {/*    right    */}
         <span
@@ -109,11 +95,11 @@ const Header = () => {
             icon={faBagShopping}
             className="mx-3 my-1 hover:scale-105 active:scale-95"
           ></FontAwesomeIcon>
-          <a href="https://www.layers.shop/products/anarc" target="_blank">
+          <Link to="Watch">
             <button className="px-2 ml-2 bg-blue-500 rounded-lg hover:scale-105 active:scale-95">
               Buy Now
             </button>
-          </a>
+          </Link>
         </span>
         {/*  Menu bar   */}
         <span ref={menuRef} className="absolute right-0 z-50 p-3 lg:hidden">
@@ -135,11 +121,11 @@ const Header = () => {
         >
           <div className="block border-gray-600 border-b-2 w-fit p-2 md:hidden sm:hidden">
             <div className="my-2">
-              <a href="https://www.layers.shop/products/anarc" target="_blank">
+              <Link to="/Watch">
                 <button className="px-2 ml-2 bg-blue-500 rounded-lg">
                   Buy Now
                 </button>
-              </a>
+              </Link>
             </div>
             <FontAwesomeIcon
               icon={faUser}
@@ -151,34 +137,18 @@ const Header = () => {
             ></FontAwesomeIcon>
           </div>
           <div className="">
-            <a
-              href="https://www.layers.shop/pages/our-story"
-              target="_blank"
-              className="px-3 block"
-            >
+            <Link to="/OurStory" className="px-3 block">
               Our Story
-            </a>
-            <a
-              href="https://www.layers.shop/products/anarc"
-              target="_blank"
-              className="px-3 block"
-            >
-              ANARC Watch{" "}
-            </a>
-            <a
-              href="https://www.layers.shop/collections/arcs"
-              target="_blank"
-              className="px-3 block"
-            >
+            </Link>
+            <Link to="/Watch" className="px-3 block">
+              ANARC Watch
+            </Link>
+            <Link to="/Strap" className="px-3 block">
               Arcs Strap
-            </a>
-            <a
-              href="https://www.layers.shop/products/build-your-skin"
-              target="_blank"
-              className="px-3 block"
-            >
+            </Link>
+            <Link to="/Skin" className="px-3 block">
               Skin
-            </a>
+            </Link>
           </div>
         </span>
       </div>
