@@ -12,6 +12,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const About = () => {
+  const pageRef = useRef();
   const vidRef = useRef();
   const symbRef = useRef();
   let mm = gsap.matchMedia();
@@ -35,10 +36,10 @@ const About = () => {
         y: "-30%",
         opacity: 0,
         scrollTrigger: {
-          trigger: videle,
+          trigger: pageRef.current,
           scroller: "body",
           start: "top 50%",
-          end: "top 30%",
+          end: "top 40%",
           scrub: 1,
         },
       });
@@ -48,9 +49,9 @@ const About = () => {
         x: "-30%",
         opacity: 0,
         scrollTrigger: {
-          trigger: videle,
+          trigger: pageRef.current,
           scroller: "body",
-          start: "top 60%",
+          start: "top 50%",
           end: "top 40%",
           scrub: 1,
         },
@@ -59,7 +60,7 @@ const About = () => {
   });
   return (
     <div className="h-[40rem] w-full p-5 pt-20 overflow-hidden place-content-center bg-black">
-      <div className="h-full w-full">
+      <div ref={pageRef} className="h-full w-full">
         <div className="relative top-[5%] w-full h-[20%] text-white text-5xl text-center">
           About Me?
         </div>

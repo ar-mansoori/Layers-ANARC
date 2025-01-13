@@ -17,6 +17,8 @@ import Feedback from "./components/Feedback";
 import Page8 from "./components/Page8";
 import Page9 from "./components/Page9";
 import About from "./components/About";
+import OurStory from "./components/Webpages/OurStory";
+import { Routes } from "react-router-dom";
 function App() {
   let LoadRef = useRef();
   useGSAP(() => {
@@ -27,9 +29,9 @@ function App() {
   });
   return (
     <main className="relative overflow-hidden">
-      <div ref={LoadRef} className="fixed z-50 h-screen w-full">
+      {/**<div ref={LoadRef} className="fixed z-50 h-screen w-full">
         <Loading />
-      </div>
+      </div>*/}
       <div className="bg-black fixed top-0 z-50">
         <Header id="nav" className="" />
       </div>
