@@ -5,6 +5,7 @@ import ANARCfrost from "../assets/ANARCfrost.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const Page9 = () => {
@@ -182,7 +183,9 @@ const Page9 = () => {
           ref={buttRef}
           className="relative sm:absolute sm:bottom-[15%] lg:bottom-[30%] sm:right-1/2 sm:translate-x-1/2 lg:right-[23%] z-[30] h-[10%] w-1/2 lg:w-1/4 bg-blue-500 rounded-3xl place-self-center place-content-center text-center text-4xl text-white shadow-lg active:shadow-none active:scale-95 duration-75"
         >
-          <button>Buy Now</button>
+          <Link to="/Watch">
+            <button>Buy Now</button>
+          </Link>
         </div>
         {/**Price */}
         <div

@@ -10,12 +10,12 @@ import About from "../About";
 gsap.registerPlugin(ScrollTrigger);
 
 function OurStory() {
-  const heroRef = useRef(null);
-  const missionRef = useRef(null);
-  const valuesRef = useRef(null);
-  const values1Ref = useRef(null);
-  const values2Ref = useRef(null);
-  const storyRef = useRef(null);
+  const heroRef = useRef();
+  const missionRef = useRef();
+  const valuesRef = useRef();
+  const values1Ref = useRef();
+  const values2Ref = useRef();
+  const storyRef = useRef();
 
   useGSAP(() => {
     gsap.from(".letter", {
@@ -275,9 +275,9 @@ function OurStory() {
             </div>
           </div>
         </div>
-        <div className="relative z-40">
-          <About />
-        </div>
+      </div>
+      <div className="relative h-fit w-full z-40">
+        <About />
       </div>
     </>
   );
