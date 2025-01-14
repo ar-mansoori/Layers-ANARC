@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import bolt from "../assets/bolt.gif";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page6 = () => {
   let pageRef = useRef();

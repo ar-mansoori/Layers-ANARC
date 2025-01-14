@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import LayersXAR from "../assets/LayersXAR.mp4";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Loading = () => {
   let vidRef = useRef();

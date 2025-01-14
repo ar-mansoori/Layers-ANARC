@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const pageRef = useRef();
@@ -21,7 +23,7 @@ const About = () => {
 
     gsap.to(videle, {
       scrollTrigger: {
-        trigger: videle,
+        trigger: pageRef.current,
         scroller: "body",
         start: "top 50%",
         end: "top -25%",

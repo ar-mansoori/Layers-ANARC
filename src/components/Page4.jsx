@@ -4,6 +4,8 @@ import animVid from "../assets/animVid.webm";
 import scrollVid from "../assets/scrollVid.mp4";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page4 = () => {
   let pageRef = useRef();

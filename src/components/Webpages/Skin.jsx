@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import mobskin from "./asset/mobskin.webp";
 import lapskin from "./asset/lapskin.webp";
 import { useGSAP } from "@gsap/react";
+import About from "../About";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skin = () => {
@@ -248,6 +249,9 @@ const Skin = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="relative z-40">
+        <About />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import fitness from "./asset/fitness.webp";
 import aoc from "./asset/aoc.webp";
 import lkc from "./asset/lkc.webp";
 import Founders from "../../assets/Founders.png";
-
+import About from "../About";
 gsap.registerPlugin(ScrollTrigger);
 
 function OurStory() {
@@ -274,6 +274,9 @@ function OurStory() {
               <p>Neel & Shlok , co-founders of Layers</p>
             </div>
           </div>
+        </div>
+        <div className="relative z-40">
+          <About />
         </div>
       </div>
     </>

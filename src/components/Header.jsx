@@ -12,6 +12,8 @@ import {
 import { Link, Links } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   let [menu, setmenu] = useState(0);

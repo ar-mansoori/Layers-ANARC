@@ -12,6 +12,8 @@ import Skin from "./components/Webpages/Skin";
 import Header from "./components/Header";
 import About from "./components/About";
 import Feedback from "./components/Feedback";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 function App() {
   const LoadRef = useRef();
   useGSAP(() => {
@@ -35,9 +37,6 @@ function App() {
         <Route path="/Strap" element={<Strap />} />
         <Route path="/Skin" element={<Skin />} />
       </Routes>
-      <div className="relative z-40">
-        <About />
-      </div>
       <div className="relative z-40">
         <Feedback />
       </div>

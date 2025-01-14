@@ -3,6 +3,8 @@ import ANARCilluminate from "../assets/ANARCilluminate.png";
 import SpotLight from "../assets/SpotLight.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page5 = () => {
   let pageRef = useRef();

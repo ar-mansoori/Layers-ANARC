@@ -13,6 +13,8 @@ import Page8 from "../Page8";
 import Page9 from "../Page9";
 import About from "../About";
 import Feedback from "../Feedback";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
   return (
@@ -43,6 +45,9 @@ const LandingPage = () => {
       </div>
       <div className="relative z-40">
         <Page9 />
+      </div>
+      <div className="relative z-40">
+        <About />
       </div>
     </main>
   );

@@ -4,6 +4,8 @@ import ANARCearthy from "../assets/ANARCearthy.png";
 import ANARCfrost from "../assets/ANARCfrost.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page9 = () => {
   let pageRef = useRef();
