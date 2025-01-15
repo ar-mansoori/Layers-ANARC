@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Feedback from "./components/Feedback";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Loading from "./components/Loading";
+import ScrolltoTop from "./components/ScrolltoTop";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const LoadRef = useRef();
@@ -24,9 +26,10 @@ function App() {
   });
   return (
     <main className="relative overflow-hidden">
-      {/**<div ref={LoadRef} className="fixed z-50 h-screen w-full">
+      <ScrolltoTop />
+      <div ref={LoadRef} className="fixed z-50 h-screen w-full">
         <Loading />
-      </div>*/}
+      </div>
       <div className="bg-black fixed top-0 z-50">
         <Header id="nav" />
       </div>

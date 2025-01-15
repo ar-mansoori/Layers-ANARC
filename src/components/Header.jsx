@@ -57,10 +57,14 @@ const Header = () => {
     });
   });
   return (
-    <div className="fixed w-full px-1">
+    <div
+      className={`fixed duration-700 ${
+        menu ? "h-screen backdrop-blur-md" : ""
+      } bg-red-50/0 w-full px-1`}
+    >
       <div
         ref={headRef}
-        className="p-1 m-1 w-full flex place-self-center rounded-2xl shadow-lg shadow-slate-900/50 backdrop-blur-md bg-slate-900/80 text-white"
+        className="p-1 m-1 h-14 w-full flex place-self-center rounded-2xl shadow-lg shadow-slate-900/50 backdrop-blur-md bg-slate-900/80 text-white"
       >
         {/*    logo    */}
         <a href="/" className="h-fit w-fit">
@@ -110,18 +114,15 @@ const Header = () => {
               setmenu(!menu);
             }}
             icon={menu ? faEllipsisVertical : faBars}
-            className="text-2xl"
+            className="text-2xl w-8"
           />
         </span>
         {/*   Side Menu    */}
         <span
-          className={
-            menu
-              ? "scale-1 duration-100 origin-[95%_10%] p-1 absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-sm bg-gray-500/50 z-40 lg:hidden"
-              : "scale-0 duration-100 origin-[95%_10%] p-1 absolute right-0 top-0 h-fit w-44 border-2 border-gray-600 rounded-3xl backdrop-blur-sm bg-gray-500/50 z-40 lg:hidden"
-          }
+          className={`duration-100 text-2xl origin-[95%_5%] p-1 absolute right-0 top-0 h-72 place-content-evenly w-52 border-2 border-gray-400/50 rounded-2xl backdrop-blur-sm bg-gray-600/50 z-40 lg:hidden
+            ${menu ? "scale-1" : "scale-0"}`}
         >
-          <div className="block border-gray-600 border-b-2 w-fit p-2 md:hidden sm:hidden">
+          <div className="block border-gray-600 border-b-2 w-full h-fit p-0 md:hidden sm:hidden">
             <div className="my-2">
               <Link to="/Watch">
                 <button className="px-2 ml-2 bg-blue-500 rounded-lg">
@@ -131,14 +132,14 @@ const Header = () => {
             </div>
             <FontAwesomeIcon
               icon={faUser}
-              className="mx-3 my-1"
+              className="mx-3 my-2"
             ></FontAwesomeIcon>
             <FontAwesomeIcon
               icon={faBagShopping}
-              className="mx-3 my-1"
+              className="mx-3 my-2"
             ></FontAwesomeIcon>
           </div>
-          <div className="">
+          <div className="h-fit w-fit">
             <Link to="/OurStory" className="px-3 block">
               Our Story
             </Link>

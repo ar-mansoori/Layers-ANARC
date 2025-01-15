@@ -276,7 +276,7 @@ function OurStory() {
           </div>
         </div>
       </div>
-      <div className="relative h-fit w-full z-40">
+      <div className="sticky z-40">
         <About />
       </div>
     </>

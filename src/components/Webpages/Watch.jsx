@@ -18,7 +18,49 @@ import design from "./asset/design.webp";
 import Chipset from "./asset/Chipset.webp";
 import fitness from "./asset/fitness.webp";
 import illum from "./asset/illum.webp";
+import wireless from "./asset/wireless.webp";
+import inBox from "./asset/inBox.webp";
 gsap.registerPlugin(ScrollTrigger);
+
+const faqs = [
+  {
+    id: 1,
+    question: "What's included in the box?",
+    answer:
+      "The Anarc Watch comes with a magnetic charging cable, user manual, and the watch itself with a premium silicone strap pre-installed.",
+    image: inBox,
+  },
+  {
+    id: 0,
+    question: "What makes the Anarc Watch unique?",
+    answer:
+      "The Anarc Watch features a distinctive octagonal design, premium build quality, and customizable watch faces. It's made to break molds with its innovative approach to smartwatch design.",
+  },
+  {
+    id: 3,
+    question: "What is the battery life?",
+    answer:
+      "The Anarc Watch offers up to 7 days of battery life with normal usage. Heavy usage with features like GPS and continuous heart rate monitoring may reduce battery life.",
+  },
+  {
+    id: 4,
+    question: "Is the watch water resistant?",
+    answer:
+      "Yes, the Anarc Watch has water resistance up to 5ATM, making it suitable for swimming and showering. However, it's not recommended for deep water activities or diving.",
+  },
+  {
+    id: 5,
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept all major credit cards, debit cards, UPI, and net banking options. All payments are processed securely through our payment gateway.",
+  },
+  {
+    id: 6,
+    question: "What is your return policy?",
+    answer:
+      "We offer a 7-day return policy for all our products. The item must be unused and in its original packaging. Shipping costs for returns are borne by the customer unless the product is defective.",
+  },
+];
 
 function ProductDetails() {
   const [color, setColor] = useState("frost");
@@ -64,7 +106,9 @@ function ProductDetails() {
   const handleQuantityChange = (change) => {
     setQuantity(Math.max(1, quantity + change));
   };
+  /**FAQs */
 
+  const [isOpen, setisOpen] = useState(faqs[0].id);
   return (
     <div className="min-h-screen bg-white pt-5">
       <div className="max-w-7xl m-auto py-12">
@@ -302,6 +346,89 @@ function ProductDetails() {
               notification. Enjoy vibrant, clear visuals whether it's bright out
               or lights out.
             </div>
+          </div>
+          <div
+            className="h-[50vh] sm:h-[70vh] w-full p-5 bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: `url('${wireless}')`,
+
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="relative place-self-end w-1/2 text-white text-4xl sm:text-6xl font-semibold sm:font-normal">
+              Stay truly wireless.
+            </div>
+            <div className="relative my-5 place-self-end w-1/2 text-gray-400 text-lg sm:text-xl">
+              Get undisturbed down time! Connect your watch to your earbuds to
+              enjoy music, wherever you go.
+            </div>
+          </div>
+        </div>
+        {/**FAQs */}
+        <div className="relative z-40 max-w-3xl mx-auto p-5">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Everything you need to know about the Anarc Watch
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            {faqs.map((faq, index) => {
+              return (
+                <div
+                  key={index}
+                  className="border-b border-gray-200 last:border-0 p-2"
+                >
+                  <button
+                    key={index}
+                    className="w-full py-6 flex items-center justify-between text-left"
+                    onClick={() => setisOpen(faq.id)}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="text-lg font-medium text-gray-900">
+                        {faq.question}
+                      </span>
+                    </div>
+                    <svg
+                      className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+                        isOpen == faq.id ? "transform rotate-180" : ""
+                      }`}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      isOpen == faq.id
+                        ? "max-h-[500px] opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="pb-6 px-10">
+                      <p className="text-gray-600">{faq.answer}</p>
+                      {faq.image && (
+                        <div className="mt-4">
+                          <img
+                            src={faq.image}
+                            alt="Product details"
+                            className="rounded-3xl shadow-md w-full max-w-md mx-auto transition-transform duration-300 hover:scale-105"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
