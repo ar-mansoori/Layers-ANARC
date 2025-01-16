@@ -15,6 +15,7 @@ import Feedback from "./components/Feedback";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./components/Loading";
 import ScrolltoTop from "./components/ScrolltoTop";
+import LoginPage from "./components/Webpages/LoginPage";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const LoadRef = useRef();
@@ -39,6 +40,7 @@ function App() {
         <Route path="/Watch" element={<Watch />} />
         <Route path="/Strap" element={<Strap />} />
         <Route path="/Skin" element={<Skin />} />
+        <Route path="/Login" element={<LoginPage />} />
       </Routes>
       <div className="relative z-40">
         <Feedback />
