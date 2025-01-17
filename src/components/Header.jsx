@@ -45,11 +45,13 @@ const Header = () => {
     });
     tl.from(midRef.current, {
       y: -100,
+      display: "none",
       opacity: 0,
       duration: 1,
     });
     tl.from(rightRef.current, {
       x: 10,
+      display: "none",
       opacity: 0,
       duration: 0.5,
     });

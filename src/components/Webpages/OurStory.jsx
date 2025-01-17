@@ -18,6 +18,11 @@ function OurStory() {
   const storyRef = useRef();
 
   useGSAP(() => {
+    gsap.from(heroRef.current, {
+      y: "-50%",
+      opacity: 0,
+      duration: 2,
+    });
     gsap.from(".letter", {
       opacity: 0,
       ease: "power3.out",
@@ -71,16 +76,15 @@ function OurStory() {
     <>
       <div className="bg-white pt-20">
         {/* Hero Section */}
-        <div
-          ref={heroRef}
-          className="relative text-center text-white px-4 w-full h-60 bg-blue-950 place-content-center"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Chaos is Creativity
-          </h1>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-            Creating unique designs that reflect your personality
-          </p>
+        <div className="relative text-center text-white px-4 w-full h-60 bg-blue-950 place-content-center">
+          <div ref={heroRef}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Chaos is Creativity
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+              Creating unique designs that reflect your personality
+            </p>
+          </div>
         </div>
 
         {/* Mission Section */}

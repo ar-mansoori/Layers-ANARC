@@ -192,7 +192,6 @@ const Page4 = () => {
           scroller: "body",
           start: "32% 28%",
           end: "32% 23%",
-
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -205,7 +204,6 @@ const Page4 = () => {
           scroller: "body",
           start: "32% 21%",
           end: "32% 16%",
-
           toggleActions: "play reverse restart reverse",
         },
       });
@@ -285,7 +283,6 @@ const Page4 = () => {
           scroller: "body",
           start: "35% 35%",
           end: "35% 30%",
-          markers: true,
           onEnter: () => vid1ele.play(),
           onLeave: () => vid1ele.pause(),
           onEnterBack: () => vid1ele.play(),
@@ -305,7 +302,6 @@ const Page4 = () => {
           scroller: "body",
           start: "35% 28%",
           end: "35% 23%",
-          markers: true,
           onEnter: () => vid2ele.play(),
           onLeave: () => vid2ele.pause(),
           onEnterBack: () => vid2ele.play(),
@@ -325,7 +321,6 @@ const Page4 = () => {
           scroller: "body",
           start: "35% 21%",
           end: "35% 16%",
-          markers: true,
           onEnter: () => vid3ele.play(),
           onLeave: () => vid3ele.pause(),
           onEnterBack: () => vid3ele.play(),
