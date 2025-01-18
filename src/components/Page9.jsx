@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import ANARCblack from "../assets/ANARCblack.png";
-import ANARCearthy from "../assets/ANARCearthy.png";
-import ANARCfrost from "../assets/ANARCfrost.png";
+import ANARCblack from "../assets/Anarcblack.png";
+import ANARCearthy from "../assets/Anarcearthy.png";
+import ANARCfrost from "../assets/Anarcfrost.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
