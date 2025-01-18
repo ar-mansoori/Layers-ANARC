@@ -390,7 +390,10 @@ const Page4 = () => {
   });
 
   return (
-    <div ref={pageRef} className="h-screen w-full p-5 pt-20">
+    <div
+      ref={pageRef}
+      className="h-auto sm:h-screen w-full p-5 pt-20 overflow-x-hidden no-scrollbar"
+    >
       <div className="h-full w-full">
         {/*Title */}
         <div
@@ -402,11 +405,11 @@ const Page4 = () => {
         {/*Videos */}
         <div
           ref={vidContRef}
-          className="p-5 sm:my-3 relative lg:absolute lg:right-5 lg:top-20 h-2/3 sm:h-3/5 lg:h-4/6 xl:h-5/6 w-full sm:w-full lg:w-1/2 z-10 place-self-center place-content-center"
+          className="p-5 sm:my-3 relative lg:absolute lg:right-5 lg:top-20 h-[500px] sm:h-3/5 lg:h-4/6 xl:h-5/6 w-full sm:w-full lg:w-1/2 z-10 place-self-center place-content-center"
         >
           <div
             ref={contRef}
-            className="relative flex overflow-hidden w-full h-full py-[48%] sm:py-24 lg:py-32 xl:py-40 rounded-2xl scale-95"
+            className="relative flex overflow-hidden w-full h-full py-[160px] sm:py-24 lg:py-32 xl:py-40 rounded-2xl scale-95"
           >
             <div
               ref={vidSubContRef}

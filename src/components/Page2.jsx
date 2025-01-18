@@ -105,7 +105,7 @@ const Page2 = () => {
     <div
       ref={pageref}
       id="page2"
-      className="h-screen w-full place-content-evenly overflow-y-hidden"
+      className="h-auto min-h-screen w-full place-content-evenly overflow-y-auto px-4 sm:px-8"
     >
       {/*Watch image */}
       <div

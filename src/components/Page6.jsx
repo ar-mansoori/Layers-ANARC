@@ -114,7 +114,7 @@ const Page6 = () => {
   return (
     <div
       ref={pageRef}
-      className="h-screen w-full p-5 pt-20 overflow-hidden place-content-center"
+      className="h-auto sm:h-screen w-full p-5 pt-20 overflow-x-hidden sm:overflow-visible place-content-center"
     >
       <div className="h-full w-full">
         {/** title */}

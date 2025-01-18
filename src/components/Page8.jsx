@@ -67,7 +67,7 @@ const Page8 = () => {
         {/**Description2 */}
         <div
           ref={desc2Ref}
-          className="absolute z-0 p-5 sm:pt-10 md:pt-5 lg:pb-5 lg:pl-10 left-0 md:right-0 bottom-0 w-[88%] sm:w-[67%] md:w-[61%] h-[32.5%] sm:h-[40%] md:h-[35%] place-content-start md:place-self-end text-lg font-medium text-white bg-gray-400 origin-top-right md:origin-top-left"
+          className="absolute z-0 p-5 sm:pt-10 md:pt-5 lg:pb-5 lg:pl-10 left-0 md:right-0 bottom-0 w-[88%] sm:w-[67%] md:w-[61%] h-[32.5%] sm:h-[40%] md:h-[35%] place-content-start md:place-self-end text-lg font-medium text-white bg-gray-400 origin-top-right md:origin-top-left overflow-y-auto"
         >
           <p>
             Without chaos there would be no innovation. Without chaos there

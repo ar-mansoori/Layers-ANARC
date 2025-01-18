@@ -113,21 +113,19 @@ const Page3 = () => {
     });
   });
   return (
-    <div className="h-screen w-full pb-24 sm:pb-0 px-5 sm:px-0 pt-20 xl:pt-14 bg-black overflow-hidden">
+    <div className="h-screen w-full pb-24 sm:pb-0 px-5 sm:px-0 pt-20 xl:pt-14 bg-black overflow-y-auto sm:overflow-y-hidden overflow-x-hidden no-scrollbar">
       <div id="box" className="relative p-5 px-0 h-full w-full bg-none">
         {/*Title */}
         <div className="relative -top-6 z-[9] sm:absolute sm:top-1/4 md:top-1/3 xl:top-1/3 xl:left-12 md:-translate-y-1/2 sm:w-1/2 sm:place-self-start p-5 text-center">
-          <div
-            ref={titleRef}
-            className="text-5xl text-white sm:text-6xl lg:text-8xl sm:font-thin"
-          >
-            Forged in stainless steel.
+          <div className="text-5xl text-white sm:text-6xl lg:text-8xl sm:font-thin">
+            <p ref={titleRef}>Forged in stainless steel.</p>
           </div>
         </div>
 
         {/*video */}
         <div className="absolute -top-20 left-0 z-[5] w-screen h-screen backdrop-blur-sm"></div>
-        {/**BG */}
+
+        {/*BG */}
         <div
           ref={box1Ref}
           className="absolute z-[4] sm:right-5 xl:right-0 xl:top-0 h-2/3 sm:h-2/3 xl:h-full w-full sm:w-1/2 xl:w-2/5 xl:m-5 xl:-mt-5 rounded-2xl bg-none scale-50"
@@ -140,7 +138,8 @@ const Page3 = () => {
             muted
           ></video>
         </div>
-        {/**front */}
+
+        {/*front */}
         <div
           ref={boxRef}
           className="relative sm:absolute sm:right-5 xl:right-0 xl:top-0 h-2/3 sm:h-2/3 xl:h-full w-full sm:w-1/2 xl:w-2/5 xl:m-5 xl:-mt-5 z-10 place-self-center rounded-2xl bg-slate-800"
