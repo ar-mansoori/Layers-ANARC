@@ -28,7 +28,6 @@ function App() {
   });
   return (
     <main className="relative overflow-hidden">
-      <SpeedInsights />
       <ScrolltoTop />
       <div ref={LoadRef} className="fixed z-50 h-screen w-full">
         <Loading />
@@ -47,6 +46,7 @@ function App() {
       <div className="relative z-40">
         <Feedback />
       </div>
+      <SpeedInsights />
     </main>
   );
 }
