@@ -113,7 +113,7 @@ const Page3 = () => {
     });
   });
   return (
-    <div className="h-screen w-full pb-24 sm:pb-0 px-5 sm:px-0 pt-20 xl:pt-14 bg-black overflow-y-auto sm:overflow-y-hidden overflow-x-hidden no-scrollbar">
+    <div className="h-[700px] sm:h-screen w-full pb-24 sm:pb-0 px-5 sm:px-0 pt-20 xl:pt-14 bg-black overflow-hidden no-scrollbar">
       <div id="box" className="relative p-5 px-0 h-full w-full bg-none">
         {/*Title */}
         <div className="relative -top-6 z-[9] sm:absolute sm:top-1/4 md:top-1/3 xl:top-1/3 xl:left-12 md:-translate-y-1/2 sm:w-1/2 sm:place-self-start p-5 text-center">

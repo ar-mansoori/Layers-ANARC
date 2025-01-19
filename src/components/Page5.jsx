@@ -120,7 +120,7 @@ const Page5 = () => {
   return (
     <div
       ref={pageRef}
-      className="h-[1000px] sm:h-screen w-screen p-5 pt-20 overflow-hidden  bg-neutral-950"
+      className="h-[800px] sm:h-screen w-screen p-5 pt-20 overflow-hidden  bg-neutral-950"
     >
       <div className="h-full w-full">
         {/*Title */}

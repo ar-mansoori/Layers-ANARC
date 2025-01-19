@@ -392,7 +392,7 @@ const Page4 = () => {
   return (
     <div
       ref={pageRef}
-      className="h-auto sm:h-screen w-full p-5 pt-20 overflow-x-hidden no-scrollbar"
+      className="h-[900px] sm:h-screen w-full p-5 pt-20 overflow-x-hidden no-scrollbar"
     >
       <div className="h-full w-full">
         {/*Title */}

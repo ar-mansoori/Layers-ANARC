@@ -159,7 +159,7 @@ const Header = () => {
               className="mx-3 my-2"
             />
           </div>
-          <div className="h-fit w-fit">
+          <div className="h-fit w-fit font-mono">
             <Link to="/OurStory" className="px-3 block">
               Our Story
             </Link>
@@ -178,7 +178,7 @@ const Header = () => {
         <div
           className={`absolute right-0 ${
             cart ? "" : "translate-x-[50%] scale-0 origin-right ease-in-out"
-          } duration-300 top-20 h-[600px] w-[300px] rounded-2xl shadow-lg shadow-slate-900/50 backdrop-blur-md bg-slate-900/80 text-white`}
+          } duration-300 top-20 h-[450px] w-[300px] rounded-2xl shadow-lg shadow-slate-900/50 backdrop-blur-md bg-slate-900/80 text-white`}
           onMouseEnter={() => setCart(true)} // Hover to set cart to true on mobile
           onMouseLeave={() => setCart(false)} // Hover to set cart to false on mobile
         >
