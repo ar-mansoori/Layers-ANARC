@@ -16,6 +16,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./components/Loading";
 import ScrolltoTop from "./components/ScrolltoTop";
 import LoginPage from "./components/Webpages/LoginPage";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const LoadRef = useRef();
@@ -27,6 +28,7 @@ function App() {
   });
   return (
     <main className="relative overflow-hidden">
+      <SpeedInsights />
       <ScrolltoTop />
       <div ref={LoadRef} className="fixed z-50 h-screen w-full">
         <Loading />
