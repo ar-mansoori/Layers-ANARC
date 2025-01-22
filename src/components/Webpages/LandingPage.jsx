@@ -1,7 +1,5 @@
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
-import Header from "../Header";
+
 import Page1 from "../Page1";
 import Page2 from "../Page2";
 import Page3 from "../Page3";
@@ -12,7 +10,6 @@ import Page7 from "../Page7";
 import Page8 from "../Page8";
 import Page9 from "../Page9";
 import About from "../About";
-import Feedback from "../Feedback";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 

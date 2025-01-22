@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Client, Databases, ID } from "appwrite";
 
 const Feedback = () => {
@@ -21,22 +23,50 @@ const Feedback = () => {
     };
 
     try {
-      const response = await databases.createDocument(
+      await databases.createDocument(
         "6782556d0039171970e4",
         "67825596001086fa7f8c",
         ID.unique(),
         payload
       );
-      alert("Feedback submitted successfully:", response);
+
+      // Show success toast
+      toast.success("🎉 Feedback submitted successfully!", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+
+      // Reset form fields
       setFeedbackBody("");
       setName("");
     } catch (error) {
+      // Show error toast
+      toast.error("❌ Error submitting feedback. Please try again.", {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+
       console.error("Error submitting feedback:", error);
     }
   };
 
   return (
     <div className="h-screen w-full place-content-center place-items-center">
+      <ToastContainer />
       <p className="text-center m-5">
         You've scrolled my 20 days of hardwork in just 20 seconds. <br /> How
         was your experience? <br /> Got any issue? Describe below...
@@ -66,7 +96,7 @@ const Feedback = () => {
               type="submit"
               className="w-full h-12 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
             >
-              Send
+              Submit
             </button>
           </div>
         </form>
