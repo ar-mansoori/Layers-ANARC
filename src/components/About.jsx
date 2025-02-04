@@ -87,7 +87,7 @@ const About = () => {
         </div>
         <div
           ref={symbRef}
-          className="relative sm:absolute flex sm:block top-[0%] sm:top-[45%] sm:right-[0%] place-content-evenly place-items-center sm:place-self-end h-fit sm:h-fit w-full sm:w-1/2"
+          className=" relative sm:absolute flex sm:block top-[0%] sm:top-[45%] sm:right-[0%] place-content-evenly place-items-center sm:place-self-end h-fit sm:h-fit w-full sm:w-1/2"
         >
           <div className="flex w-1/2 h-fit place-content-evenly">
             <a
